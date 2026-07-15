@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task - Easy Manage</title>
+    <link rel="stylesheet" href="taskCreate.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span>📋</span>
+                <h1>Easy Manage</h1>
+            </div>
+            <div class="nav-actions">
+                <a href="/Dashboard/dashboard.html" class="back-btn">
+                    ← Dashboard
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Asosiy kontent -->
+    <div class="main-container">
+        <div class="task-form-card">
+            <div class="form-header">
+                <div class="icon-wrapper">📝</div>
+                <h2>Create new task</h2>
+            </div>
+            
+            <form id="createTaskForm">
+                <div class="input-group">
+                    <label for="title">Task Title</label>
+                    <input 
+                        type="text" 
+                        id="title" 
+                        placeholder="Enter task title"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="description">Task Description</label>
+                    <textarea 
+                        id="description" 
+                        placeholder="Enter task description"
+                        rows="3"
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="High">High</option>
+                        <option value="Critical">Critical</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="status">Status</label>
+                    <select id="status">
+                        <option value="ToDo">To Do</option>
+                        <option value="InProgress" selected>In Progress</option>
+                        <option value="Done">Done</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+    <label for="roomCode">Xona Kodi</label>
+    <input 
+        type="text" 
+        id="roomCode" 
+        placeholder="URL orqali avtomatik to'ldiriladi"
+        required
+        readonly>   
+        </div>
+                
+                <button type="submit" class="create-btn" id="submitBtn">
+                    Create Task
+                </button>
+            </form>
+            
+            <div id="errorMessage" class="error-alert" style="display: none;"></div>
+            <div id="successMessage" class="success-alert" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="taskCreate.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xona Yaratish - Easy Manage</title>
+    <link rel="stylesheet" href="roomCreate.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span>📋</span>
+                <h1>Easy Manage</h1>
+            </div>
+            <div class="nav-actions">
+                <a href="/Dashboard/dashboard.html/" class="back-btn">
+                    ← Dashboardga qaytish
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Asosiy kontent -->
+    <div class="main-container">
+        <div class="room-form-card">
+            <div class="form-header">
+                <div class="icon-wrapper">🏠</div>
+                <h2>Yangi Xona Yaratish</h2>
+            </div>
+            
+            <form id="createRoomForm">
+                <div class="input-group">
+                    <label for="roomName">Xona Nomi</label>
+                    <input 
+                        type="text" 
+                        id="roomName" 
+                        placeholder="Xona nomini kiriting"
+                        required
+                    >
+                </div>
+                
+                <button type="submit" class="create-btn" id="submitBtn">
+                    Xona Yaratish
+                </button>
+            </form>
+            
+            <div id="errorMessage" class="error-alert" style="display: none;"></div>
+            <div id="successMessage" class="success-alert" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="roomCreate.js"></script>
+</body>
+</html>
