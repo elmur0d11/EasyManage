@@ -95,6 +95,20 @@ main{
     transition:.2s;
 }
 
+#joinRoomBtn{
+    background:#2a5298;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+#joinRoomBtn:hover{
+    background:#1f417d;
+}
+
 #createRoomBtn:hover{
     background:#1f417d;
 }

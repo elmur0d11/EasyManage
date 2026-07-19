@@ -8,6 +8,9 @@ const API_URL = "https://localhost:7235/api/v1/room/rooms";
 const roomsContainer = document.getElementById("roomsContainer");
 const logoutBtn = document.getElementById("logoutBtn");
 const createRoomBtn = document.getElementById("createRoomBtn");
+const joinRoomBtn = document.getElementById("joinRoomBtn");
+const updateRoomBtn = document.getElementById("updateRoomBtn");
+const deleteRoomBtn = document.getElementById("deleteRoomBtn");
 
 logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("accessToken");
@@ -24,6 +27,18 @@ function enterRoom(roomCode) {
 
 createRoomBtn.addEventListener("click", () => {
     window.location.href = "../Room/roomCreate.html";
+});
+
+joinRoomBtn.addEventListener("click", () => {
+    window.location.href = "../Room/roomJoin.html";
+});
+
+updateRoomBtn.addEventListener("click", () => {
+    window.location.href = "../Room/roomUpdate.html"
+});
+
+deleteRoomBtn.addEventListener("click", () => {
+    window.location.href = "../Room/roomDelete.html"
 });
 
 async function loadRooms() {
