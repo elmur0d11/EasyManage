@@ -1,4 +1,4 @@
-const API_URL = "https://localhost:7235/api/v1/room/rename";
+const API_URL = "http://localhost:8081/api/v1/room/rename";
 
 const renameBtn = document.getElementById("renameBtn");
 const message = document.getElementById("message");

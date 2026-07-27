@@ -1,5 +1,4 @@
-const API_URL = "https://localhost:7235/api/v1/room/join";
-// URL ni o'zingiznikiga almashtiring
+const API_URL = "http://localhost:8081/api/v1/room/join";
 
 const joinBtn = document.getElementById("joinBtn");
 

@@ -1,4 +1,4 @@
-const API_URL = "https://localhost:7235/api/v1/room/delete";
+const API_URL = "http://localhost:8081/api/v1/room/delete";
 
 const deleteBtn = document.getElementById("deleteBtn");
 const message = document.getElementById("message");

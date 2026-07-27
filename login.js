@@ -2,7 +2,7 @@ const form = document.getElementById("loginForm");
 const errorMessage = document.getElementById("errorMessage");
 const loginButton = document.querySelector(".login-btn");
 
-const API_URL = "https://localhost:7235/api/v1/auth/login";
+const API_URL = "http://localhost:8081/api/v1/auth/login";
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();

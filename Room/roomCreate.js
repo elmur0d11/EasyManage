@@ -1,4 +1,4 @@
-const API_URL = 'https://localhost:7235/api/v1/room/create';
+const API_URL = 'http://localhost:8081/api/v1/room/create';
 const DASHBOARD_URL = '/Dashboard/dashboard.html';
 const LOGIN_URL = '../login.html';
 

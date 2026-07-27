@@ -4,7 +4,7 @@ if (!token) {
     window.location.href = "login.html";
 }
 
-const API_URL = "https://localhost:7235/api/v1/room/rooms";
+const API_URL = "http://localhost:8081/api/v1/room/rooms";
 const roomsContainer = document.getElementById("roomsContainer");
 const logoutBtn = document.getElementById("logoutBtn");
 const createRoomBtn = document.getElementById("createRoomBtn");

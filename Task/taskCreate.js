@@ -1,4 +1,4 @@
-const API_URL = 'https://localhost:7235/api/v1/task/create';
+const API_URL = 'http://localhost:8081/api/v1/task/create';
 const DASHBOARD_URL = `/Room/room.html?roomCode=${roomCode}`;
 const LOGIN_URL = '../login.html';
 
@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const roomCode = getRoomCodeFromUrl();
     if (roomCode) {
         roomCodeInput.value = roomCode;
-        roomCodeInput.readOnly = true; // O'zgartirib bo'lmaydigan qilish
-        console.log('RoomCode URL dan olindi:', roomCode);
+        roomCodeInput.readOnly = true; 
     }
 });
 
@@ -51,18 +50,18 @@ form.addEventListener('submit', async (e) => {
     
     if (!title) {
         errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Iltimos, vazifa nomini kiriting';
+        errorMessage.textContent = 'Please enter tasks title';
         return;
     }
 
     if (!roomCode) {
         errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Xona kodi topilmadi';
+        errorMessage.textContent = 'Room code not found';
         return;
     }
     
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Yaratilmoqda...';
+    submitBtn.textContent = 'Creating...';
     errorMessage.style.display = 'none';
     successMessage.style.display = 'none';
     
@@ -82,33 +81,39 @@ form.addEventListener('submit', async (e) => {
             })
         });
         
-        if (response.status === 401 || response.status === 403) {
-            localStorage.removeItem('authToken');
+        if (response.status === 401) {
+            alert("Please login again!");
             window.location.href = LOGIN_URL;
             return;
         }
+
+        if (response.status === 403) {
+             alert("You don't have permission!");
+             return;
+         }
         
         if (!response.ok) {
             const error = await response.json().catch(() => ({}));
-            throw new Error(error.message || 'Xatolik yuz berdi');
+            throw new Error(error.message || 'Error occured');
         }
         
         const data = await response.json();
-        console.log('Vazifa yaratildi:', data);
+        console.log('Task created:', data);
         
         successMessage.style.display = 'block';
-        successMessage.textContent = 'Vazifa muvaffaqiyatli yaratildi!';
+        successMessage.textContent = 'Task created successfully';
         
         setTimeout(() => {
-            window.location.href = DASHBOARD_URL;
+            const roomCode = roomCodeInput.value;
+            window.location.href = `/Room/room.html?roomCode=${encodeURIComponent(roomCode)}`;
         }, 500);
         
     } catch (error) {
-        console.error('Xatolik:', error);
+        console.error('Error:', error);
         errorMessage.style.display = 'block';
-        errorMessage.textContent = error.message || 'Xatolik yuz berdi';
+        errorMessage.textContent = error.message || 'Error occured!';
     } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Vazifa Yaratish';
+        submitBtn.textContent = 'Create Task';
     }
 });

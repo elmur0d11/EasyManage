@@ -30,7 +30,7 @@ async function loadTasks() {
     try {
 
         const response = await fetch(
-            `https://localhost:7235/api/v1/task/tasks?roomCode=${encodeURIComponent(roomCode)}`,
+            `http://localhost:8081/api/v1/task/tasks?roomCode=${encodeURIComponent(roomCode)}`,
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -126,8 +126,7 @@ async function loadTasks() {
                 </button>
 
             </div>
-            </div>
-
+            
         </div>
     `;
 });
@@ -151,7 +150,7 @@ async function updatePriority(taskTitle) {
     try {
 
         const response = await fetch(
-            `https://localhost:7235/api/v1/task/updatePriority?roomCode=${encodeURIComponent(roomCode)}&taskTitle=${encodeURIComponent(taskTitle)}`,
+            `http://localhost:8081/api/v1/task/updatePriority?roomCode=${encodeURIComponent(roomCode)}&taskTitle=${encodeURIComponent(taskTitle)}`,
             {
                 method: "PUT",
                 headers: {
@@ -188,7 +187,7 @@ async function updateStatus(taskTitle) {
     try {
 
         const response = await fetch(
-            `https://localhost:7235/api/v1/task/updateStatus?roomCode=${encodeURIComponent(roomCode)}&taskTitle=${encodeURIComponent(taskTitle)}`,
+            `http://localhost:8081/api/v1/task/updateStatus?roomCode=${encodeURIComponent(roomCode)}&taskTitle=${encodeURIComponent(taskTitle)}`,
             {
                 method: "PUT",
                 headers: {

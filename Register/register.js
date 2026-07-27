@@ -1,4 +1,4 @@
-const API_URL = "https://localhost:7235/api/v1/auth/register";
+const API_URL = "http://localhost:8081/api/v1/auth/register";
 
 const form = document.getElementById("registerForm");
 const message = document.getElementById("message");
