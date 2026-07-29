@@ -4,37 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete Room | EasyManage</title>
-
     <link rel="stylesheet" href="roomDelete.css">
 </head>
 <body>
 
     <nav class="navbar">
-
         <button class="dashboard-btn" onclick="goDashboard()">
-            Dashboard
+            ← Dashboard
         </button>
 
         <h1 class="logo">EasyManage</h1>
 
         <div class="empty"></div>
-
     </nav>
 
     <div class="container">
-
         <div class="card">
-
             <h2>Delete Room</h2>
 
             <p class="warning">
-                This action is permanent. Please confirm before deleting.
+                ⚠️ This action is permanent and cannot be undone. All tasks inside this room will be permanently deleted.
             </p>
 
             <input
                 type="text"
                 id="roomCode"
-                placeholder="Room Code">
+                placeholder="Enter Room Code">
 
             <input
                 type="text"
@@ -46,12 +41,9 @@
             </button>
 
             <p id="message"></p>
-
         </div>
-
     </div>
 
     <script src="roomDelete.js"></script>
-
 </body>
 </html>

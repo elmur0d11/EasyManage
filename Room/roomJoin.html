@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Room | EasyManage</title>
-
     <link rel="stylesheet" href="roomJoin.css">
 </head>
 <body>
 
     <nav class="navbar">
-
         <div class="left">
-            <button onclick="goDashboard()">Dashboard</button>
+            <button onclick="goDashboard()">← Dashboard</button>
         </div>
 
         <div class="logo">
@@ -20,33 +18,27 @@
         </div>
 
         <div class="right"></div>
-
     </nav>
 
     <main class="container">
-
         <div class="card">
-
             <h2>Join Room</h2>
 
-            <p>Enter the room code below.</p>
+            <p>Enter the room code shared with you to join.</p>
 
             <input
                 type="text"
                 id="roomCode"
-                placeholder="Room Code">
+                placeholder="Enter Room Code">
 
             <button id="joinBtn">
                 Join Room
             </button>
 
             <p id="message"></p>
-
         </div>
-
     </main>
 
     <script src="roomJoin.js"></script>
-
 </body>
 </html>

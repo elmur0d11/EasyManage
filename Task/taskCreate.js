@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8081/api/v1/task/create';
+const API_URL = 'https://easymanage-api-b8gpdnhvfucteddc.centralindia-01.azurewebsites.net/api/v1/task/create';
 const DASHBOARD_URL = `/Room/room.html?roomCode=${roomCode}`;
 const LOGIN_URL = '../login.html';
 

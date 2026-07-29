@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Task - Easy Manage</title>
+    <title>Create Task | EasyManage</title>
     <link rel="stylesheet" href="taskCreate.css">
 </head>
 <body>
@@ -12,22 +12,22 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <span>📋</span>
-                <h1>Easy Manage</h1>
+                <h1>EasyManage</h1>
             </div>
             <div class="nav-actions">
-                <a href="/Dashboard/dashboard.html" class="back-btn">
-                    ← Dashboard
+                <a href="#" class="back-btn" id="backBtn">
+                    ← Back to Room
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Asosiy kontent -->
+    <!-- Main Content -->
     <div class="main-container">
         <div class="task-form-card">
             <div class="form-header">
                 <div class="icon-wrapper">📝</div>
-                <h2>Create new task</h2>
+                <h2>Create New Task</h2>
             </div>
             
             <form id="createTaskForm">
@@ -70,14 +70,15 @@
                 </div>
 
                 <div class="input-group">
-    <label for="roomCode">Xona Kodi</label>
-    <input 
-        type="text" 
-        id="roomCode" 
-        placeholder="URL orqali avtomatik to'ldiriladi"
-        required
-        readonly>   
-        </div>
+                    <label for="roomCode">Room Code</label>
+                    <input 
+                        type="text" 
+                        id="roomCode" 
+                        placeholder="Auto-filled from URL"
+                        required
+                        readonly
+                    >
+                </div>
                 
                 <button type="submit" class="create-btn" id="submitBtn">
                     Create Task

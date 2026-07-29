@@ -4,49 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rename Room | EasyManage</title>
-
     <link rel="stylesheet" href="roomUpdate.css">
 </head>
 <body>
 
 <nav class="navbar">
-
     <button class="dashboard-btn" onclick="goDashboard()">
-        Dashboard
+        ← Dashboard
     </button>
 
     <h1 class="logo">EasyManage</h1>
 
     <div style="width:120px;"></div>
-
 </nav>
 
 <div class="container">
-
     <div class="card">
-
         <h2>Rename Room</h2>
 
-        <p>Update your room name.</p>
+        <p>Enter the room code and new name to update.</p>
 
         <input
             type="text"
             id="roomCode"
-            placeholder="Room Code">
+            placeholder="Enter Room Code">
 
         <input
             type="text"
             id="roomName"
-            placeholder="New Room Name">
+            placeholder="Enter New Room Name">
 
         <button id="renameBtn">
             Rename Room
         </button>
 
         <p id="message"></p>
-
     </div>
-
 </div>
 
 <script src="roomUpdate.js"></script>

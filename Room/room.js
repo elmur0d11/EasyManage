@@ -30,7 +30,7 @@ async function loadTasks() {
     try {
 
         const response = await fetch(
-            `http://localhost:8081/api/v1/task/tasks?roomCode=${encodeURIComponent(roomCode)}`,
+            `https://easymanage-api-b8gpdnhvfucteddc.centralindia-01.azurewebsites.net/api/v1/task/tasks?roomCode=${encodeURIComponent(roomCode)}`,
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -150,7 +150,7 @@ async function updatePriority(taskTitle) {
     try {
 
         const response = await fetch(
-            `http://localhost:8081/api/v1/task/updatePriority?roomCode=${encodeURIComponent(roomCode)}&taskTitle=${encodeURIComponent(taskTitle)}`,
+            `https://easymanage-api-b8gpdnhvfucteddc.centralindia-01.azurewebsites.net/api/v1/task/updatePriority?roomCode=${encodeURIComponent(roomCode)}&taskTitle=${encodeURIComponent(taskTitle)}`,
             {
                 method: "PUT",
                 headers: {
@@ -187,7 +187,7 @@ async function updateStatus(taskTitle) {
     try {
 
         const response = await fetch(
-            `http://localhost:8081/api/v1/task/updateStatus?roomCode=${encodeURIComponent(roomCode)}&taskTitle=${encodeURIComponent(taskTitle)}`,
+            `https://easymanage-api-b8gpdnhvfucteddc.centralindia-01.azurewebsites.net/api/v1/task/updateStatus?roomCode=${encodeURIComponent(roomCode)}&taskTitle=${encodeURIComponent(taskTitle)}`,
             {
                 method: "PUT",
                 headers: {

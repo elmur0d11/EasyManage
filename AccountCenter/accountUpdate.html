@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Account | EasyManage</title>
+    <link rel="stylesheet" href="accountUpdate.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>EasyManage</h1>
+            </div>
+            <div class="nav-actions">
+                <a href="/AccountCenter/accountCenter.html" class="back-btn">
+                    ← Account Center
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="account-form-card">
+            <div class="form-header">
+                <div class="icon-wrapper">⚙️</div>
+                <h2>Update Account</h2>
+                <p class="subtitle">Modify your account information</p>
+            </div>
+            
+            <form id="updateAccountForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        placeholder="Enter new username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Enter your email address"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="role">Role</label>
+                    <select id="role">
+                        <option value="1">User</option>
+                        <option value="2">PM</option>
+                        <option value="3">ProjectManager</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="update-btn" id="submitBtn">
+                    Update Account
+                </button>
+            </form>
+            
+            <div id="errorMessage" class="error-alert" style="display: none;"></div>
+            <div id="successMessage" class="success-alert" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="accountUpdate.js"></script>
+</body>
+</html>
